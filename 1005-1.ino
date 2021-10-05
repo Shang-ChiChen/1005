@@ -8,7 +8,7 @@ void setup() {
 
 void loop() {
   int input = analogRead(13);
-  input = min(input, 300);    
+  input = min(input, 300);    //in case the value becomes too large.
   int input_map = 255-map(input, 0, 300, 0, 255);
   Serial.println(input_map);         
 
